@@ -1,0 +1,1 @@
+document.write("<h1> Subject</h1> <table border=3  ><tr><th>Name</th><th>Hourse</th></tr> <tr> <td>Java</td><td>420</td></tr>  <tr> <td>Python</td><td>320</td></tr> <tr> <td>JavaScript</td><td>520</td></tr></table>");
