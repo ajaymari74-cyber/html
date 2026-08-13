@@ -1,0 +1,29 @@
+*{
+    margin:auto;
+    padding: 0%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+  background-image: linear-gradient(to right, #ff8a00, #e52e71); 
+    /*background-image: url(/images/bus5.jpeg);*/
+   
+}
+.options{
+  text-decoration: none;
+}
+button{
+    color: red;
+    border-radius: 5px;
+    height: 20px;
+    width: 50px;
+}
+.navbar>img{
+
+    height: 40px;
+    border-radius: 50%;
+}
+.navbar h1{
+    display: flex;
+    justify-content: flex-start;
+}
