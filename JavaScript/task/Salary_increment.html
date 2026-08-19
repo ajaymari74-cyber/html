@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Increment</title>
+</head>
+<body>
+    <script>
+        let Salary=Number(prompt("Enter the number of Salary:"));
+        let experience=Number(prompt("Enter the number of Experience:"));
+        let hike;
+        let new_Salary;
+        if(experience>=10){
+            hike=Salary*20/100;
+            new_Salary=Salary+hike;
+            document.write("The new Salary is :"+new_Salary);
+        }
+        else if(experience>=5){
+            hike=Salary*10/100;
+            new_Salary=Salary+hike;
+            document.write("The new Salary is :"+new_Salary);
+        }
+        else{
+             
+            hike=Salary*5/100;
+            new_Salary=Salary+hike;
+            document.write("The new Salary is :"+new_Salary);
+        
+        }
+    </script>
+</body>
+</html>

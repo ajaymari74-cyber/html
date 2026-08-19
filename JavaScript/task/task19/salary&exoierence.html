@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            border:2px solid black;
+            display: inline-block;  
+            align-items: center;      
+            margin-top: 200px;
+            margin-left: 200px;
+padding: 4px;
+        }
+    </style>
+</head>
+<body><div></div>
+    <form class="form">
+        <label>Enter Your Score:</label>
+        <input type="number" id="sal"><br><br>
+        <label>Enter Your Experience:</label>
+        <input type="number" id="exp"><br>
+        <input type="button" value="click" onclick="fun()">
+    </form>
+    <h1 id="result"></h1>
+    <script>
+    function fun(){
+        let sal = Number(document.getElementById("sal").value);
+        let exp = Number(document.getElementById("exp").value);
+        if(sal >= 85 && exp >= 5){
+            document.getElementById("result").innerHTML = "your salary is 20000";
+        }
+        else if(sal >= 85 && exp >= 3){
+            document.getElementById("result").innerHTML = "your salary is 10000";
+        }
+        else if (sal < 85){
+            document.getElementById("result").innerHTML = "your the training prieod";
+        }
+         else if(sal >= 85 && exp >= 1){
+            document.getElementById("result").innerHTML = "your salary is 5000";
+        }
+    }
+    </script>
+</body>
+</html>

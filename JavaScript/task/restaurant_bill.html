@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for=""> Input text:</label>
+        <input type="number" id="a1"> <br><br>
+        <input type="submit" onclick="f1()">
+    </form>
+    <script>
+    function f1(){
+    //    let bill_amt=Number(prompt("Enter Restaurant Bill Amount:"));
+        let bill_amt=document.getElementById("a1").value;
+        let dis= bill_amt*(10/100);1
+        let final= bill_amt-dis;
+        if(bill_amt>1000){
+            document.write("Discount :"+dis+"<br>");
+            document.write("Final Amount:"+final+"<br>");
+
+        }
+        else{
+            document.write(" There is No Discount <br>Bill Amount:"+bill_amt);
+        }
+    }
+    </script>
+</body>
+</html>

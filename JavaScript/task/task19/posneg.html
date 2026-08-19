@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input tupe="number" id="t1">
+    <input type="button" value="submit" onclick="fun()">
+    </form>
+    <h1 id="h"></h1>
+    <script>
+        function fun(){
+           let a= document.getElementById("t1").value
+            if(a>=0){
+                document.getElementById("h").innerHTML="possitive Number";
+            }
+            else{
+                document.getElementById("h").innerHTML="negative Number";
+            }
+        }
+    </script>
+    
+</body>
+</html>

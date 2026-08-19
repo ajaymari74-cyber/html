@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <lable>Enter Your Marks:</lable>
+        <input type="text" id="t1">
+        <input type="button" value="submit" onclick="fun()">
+        <h1 id="h1"></h1>
+        <h1 id="h2"></h1>
+    </form>
+    <script>
+        function fun(){
+          let a=  document.getElementById("t1").value
+          if(a >=35){
+            document.getElementById("h1").innerHTML="Pass"
+            
+          }else
+          {
+             document.getElementById("h1").innerHTML="Fail"
+          }
+        }
+    </script>
+</body>
+</html>

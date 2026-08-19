@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Rent</title>
+</head>
+<body>
+    <script>
+        let day=Number(prompt("Enter No of days"));
+        let total_rent;
+        if(day<=3){
+            total_rent=day*1000;
+            document.write("Calculate the total rent is:"+total_rent);
+        }
+        else if(day<=7){
+            total_rent=day*900;
+            document.write("Calculate the total rent is:"+total_rent);
+        }
+        else{
+             total_rent=day*800;
+            document.write("Calculate the total rent is:"+total_rent);
+        }
+    </script>
+</body>
+</html>

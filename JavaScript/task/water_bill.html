@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Bill</title>
+</head>
+<body>
+    <script>
+        let liter=Number(prompt("Enter the number of liters"));
+        let bill_amount;
+        if(liter>0 && liter<=500){
+            bill_amount=1*liter;
+            document.write("The Bill Amount:"+bill_amount);
+        }
+        else if(liter>500){
+            bill_amount=2*liter;
+            document.write("The Bill Amount:"+bill_amount);
+        }
+        else{
+            document.write("Invalid option")
+        }
+    </script>
+    
+</body>
+</html>

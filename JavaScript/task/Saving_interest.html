@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving Interest</title>
+</head>
+<body>
+    <script>
+        let deposit=Number(prompt("Enter the number of Deposit:"));
+        let interest;
+        let total;
+
+        if(deposit>=100000){
+            interest=deposit*8/100;
+            total=deposit+interest;
+            document.write("Calculate mulurity amount:"+total);
+        }
+        else if(deposit>=50000 && deposit<100000){
+            interest=deposit*6/100;
+            total=deposit+interest;
+            document.write("Calculate mulurity amount:"+total);
+
+        }
+        else{
+            interest=deposit*4/100;
+            total=deposit+interest;
+            document.write("Calculate mulurity amount:"+total);
+        }
+    </script>
+</body>
+</html>

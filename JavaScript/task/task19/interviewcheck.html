@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Expereince Increment</title>
+</head>
+<body>
+    <form action="">
+        <h2>Interview checking</h2>
+        <label >Enter Your Aptitude Score:</label>
+        <input type="number"  id="ap1"><br>
+        <label>Enter your GD score:</label>
+        <input type="number" id="ex1"> <br>
+        <label>Enter Your Techinical Score:</label>
+        <input type="number" id="t1">
+        <h1 id="a1"></h1>
+
+    <button type="button" onclick="score()"> click</button>
+    </form>
+    <script>
+        function score(){
+            let ap=document.getElementById("ap1").value;
+            let gt=document.getElementById("ex1").value;
+            let t_s=document.getElementById("t1").value;
+            if( ap<=100 && ap>=50){
+                if( gt<=100 && gt>=65){
+                    if( t_s<=100 && t_s>=75){
+
+                        document.getElementById("a1").innerHTML="Ready for HR Interviewe";
+                    }
+                    else{
+                        document.getElementById("a1").innerHTML="Your Not Eligible";
+                    }
+                }
+                else{
+                    document.getElementById("a1").innerHTML="Your rejected in 2 round";
+                }
+            }
+            else{
+                document.getElementById("a1").innerHTML="Your rejected in 1 round";
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

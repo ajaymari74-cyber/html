@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <lable>Enter the Value:</lable>
+        <input type="number" id="t1"><br><br>
+        <lable>Enter the Value:</lable>
+        <input type="number" id="t2"><br><br>
+        <input type="button" value="ADD" onclick="add()">
+        <input type="button" value="SUB" onclick="sub()">
+        <input type="button" value="MULTI" onclick="mul()">
+        <input type="button" value="DIVI" onclick="div()">
+        <h1 id="h1"></h1>
+        
+        
+        
+    </form>
+    <script>    function add(){
+        
+            let a= Number(document.getElementById("t1").value);
+            let b= Number(document.getElementById("t2").value);
+
+    
+            let c = a+b;
+           document.getElementById("h1").innerHTML = `number ${a} + ${b} <strong>= ${c}</strong>`;
+
+        }
+
+        function sub(){
+        
+            let a= document.getElementById("t1").value;
+            let b= document.getElementById("t2").value;
+
+    
+            let c = a-b;
+           document.getElementById("h1").innerHTML = `number ${a} - ${b} <strong>= ${c}</strong>`;
+
+        }
+
+        function mul(){
+        
+            let a= document.getElementById("t1").value;
+            let b= document.getElementById("t2").value;
+
+    
+            let c = a*b;
+           document.getElementById("h1").innerHTML = `number ${a} * ${b} <strong>= ${c}</strong>`;
+
+        }
+
+        function div(){
+        
+            let a= document.getElementById("t1").value;
+            let b= document.getElementById("t2").value;
+
+    
+            let c = a/b;
+           document.getElementById("h1").innerHTML = `number ${a} / ${b} <strong>= ${c}</strong>`;
+
+        }
+    </script>
+</body>
+</html>

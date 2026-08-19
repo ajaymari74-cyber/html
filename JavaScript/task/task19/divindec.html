@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+              <div id="div"  onclick="fun()" ondblclick="fun1()" style="background-color: rgb(254, 255, 240); height: 200px; width: 200px; border: 2px solid black; display: flex; justify-content: center; align-items: center;">
+         
+        </div>
+    </center>
+    <script>
+        function fun(){
+            document.getElementById("div").style.backgroundColor = "red";
+             document.getElementById("div").style.transition = "2s";
+            document.getElementById("div").style.width = "400px";
+            document.getElementById("div").style.height = "400px";
+        }
+        function fun1(){
+            document.getElementById("div").style.backgroundColor = "green";
+            document.getElementById("div").style.width = "200px";
+            document.getElementById("div").style.height = "200px";
+        }
+    </script>
+</body>
+</html>

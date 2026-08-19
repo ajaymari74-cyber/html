@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form><label for="">Enter Your Name:</label>
+        <input type="text" id="t1"><br>
+        <input type="button" value="submit" onclick="f1()">
+        <p id="p1"> your name </p>
+        <p id="p2">your name.</p>
+    </form>
+    <script>
+        function f1() {
+            let t1 = document.getElementById("t1").value;
+            // document.write(t1+"Welcome");
+            document.getElementById("p1").innerHTML = "<strong><ins><mark>your name<mark></ins></strong>" + t1;
+            document.getElementById("p2").innerText = "<strong><ins>your name</ins></strong>" + t1;
+        }
+    </script>
+
+</body>
+
+</html>

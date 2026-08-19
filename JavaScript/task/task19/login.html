@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    <h1>Login Page</h1>
+    <form style="border: 2px solid red; display: inline-block; padding: 20px;">
+        <label>User Id:</label>
+        <input type="text" id="t1"><br><br>
+        <label>Password:</label>
+        <input type="password" id="p1"><br><br>
+        <input type="button" value="Login" onclick="log()">
+        <h1 id="h1"></h1>
+    </form>
+</center>
+
+<script>
+    function log(){
+        let enteredUser = document.getElementById("t1").value;
+        let enteredPass = document.getElementById("p1").value;
+        
+        let correctUser = "admin";
+        let correctPass = "1234";
+        
+        if(enteredUser == correctUser && enteredPass == correctPass){
+          document.getElementById("h1").innerHTML = `User Id is ${enteredUser} & Password is ${enteredPass} <br><strong>Login Successfully!</strong></span>`;
+        }
+        else{
+          document.getElementById("h1").innerHTML = `User Id is ${enteredUser} & Password is ${enteredPass} <br><strong>Login Fail!</strong></span>`;
+        }
+    }
+</script>
+</body>
+</html>

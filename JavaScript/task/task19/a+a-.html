@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="t1" style="font-size: 12px;">Text Size</h1>
+    <Button type="button" onclick="inc()" >A+</Button>
+    <Button type="button" onclick="dec()" >A-</Button>
+    <Button type="Reset" onclick="reset()" >RESET</Button>
+
+
+    <script>
+        function inc(){
+            document.getElementById("t1").style.fontSize="18px";
+        }
+         function dec(){
+            document.getElementById("t1").style.fontSize="10px";
+        }
+        
+         function reset(){
+            document.getElementById("t1").style.fontSize="12px";
+        }
+        
+    </script>
+    
+</body>
+</html>

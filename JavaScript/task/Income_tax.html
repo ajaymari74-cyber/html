@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax</title>
+</head>
+<body>
+    <script>
+        let income=Number(prompt("Enter Income:"));
+        let tax;
+        
+        if(income>=500000){
+             tax=income*(10/100); 
+            document.write("Calculate tax is:"+tax);
+          
+        }
+        else if(income<=250000 && income>=500000){
+            tax=income*(5/100);
+            
+            document.write("Calculate tax is:"+tax);
+        }
+         else if(income<250000 ){
+             document.write("The Income without tax:"+income);
+        }
+
+    </script>
+</body>
+</html>

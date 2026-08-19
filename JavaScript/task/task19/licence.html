@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="">Enter Your Age:</label>
+        <input type="number" id="age"><br><br>
+        <lable> Enter You Have License</lable>
+        <input type="text" id="lice"><br><br>
+        <input type="button" value="check" onclick="fun()">
+        <h1 id="h"></h1>
+    </form>
+    <script>
+        function fun() {
+            let age = Number(document.getElementById("age").value);
+            let licence = document.getElementById("lice").value;
+
+            if (age >= 18) {
+                if (licence == "yes") {
+                    document.getElementById("h").innerHTML = "You are eligible to drive";
+                } else {
+                    document.getElementById("h").innerHTML = "You are not eligible to drive";
+                }
+            } else {
+                document.getElementById("h").innerHTML = "You are under 18 and not eligible to drive";
+            }
+        }
+    </script>
+
+    </script>
+
+</body>
+
+</html>

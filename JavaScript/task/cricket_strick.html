@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circket Strick Rate</title>
+</head>
+<body><form>
+    <lable>Enter the Run:</lable>
+    <input type="number" name="" id="r1">
+    <label>Enter Balls:</label>
+    <input type="number" id="b1">
+</form>
+    <script>
+        let run=Number(prompt("Enter Run:"));
+        let bal=Number(prompt("Enter Balls:"));
+        let sr=(run/bal)*100;
+        document.write("Strick Rate"+sr+"<br>");
+        if(sr>150){
+            document.write("Excelent");
+        }
+        else if(sr>100){
+            document.write("Good");
+        }
+        else{
+            document.write("Avarage");
+        }
+    </script>
+</body>
+</html>

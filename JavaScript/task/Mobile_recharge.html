@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Recharge</title>
+</head>
+<body>
+    <script>
+        let recharge_amt=Number(prompt("Enter Recharge amt:"));
+        let cash;
+        if(recharge_amt>500){
+            cash=recharge_amt*15/100;
+            document.write("Calculate cash back is:"+cash);
+        }
+        else if(recharge_amt>200){
+            cash=recharge_amt*20/100;
+            document.write("Calculate cash back is:"+cash);
+        }
+        else{
+            document.write("No Cashback");
+        }
+    </script>
+    
+</body>
+</html>

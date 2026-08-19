@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result calculater</title>
+</head>
+<body>
+    <script>
+        let Tamil=Number(prompt("Enter the Tamil Mark:"));
+        let Eng=Number(prompt("Enter the English Mark:"));
+        let Mat=Number(prompt("Enter the Maths Mark:"));
+        let Sci=Number(prompt("Enter the Science Mark:"));
+        let SS =Number(prompt("Enter the Social science Mark:"));
+        let t_m=Tamil+Eng+Mat+Sci+SS;
+        let avg=t_m/5;
+        document.write("Total Mark:"+t_m+"<br>");
+        document.write("Avarage mark:"+avg+"<br>");
+        if(avg>=50){
+            document.write("Pass");
+        }
+        else{
+            document.write("Faill");
+        }
+
+
+    </script>
+    
+</body>
+</html>
