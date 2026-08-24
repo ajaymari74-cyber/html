@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Offer</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2>Shopping Offer Calculator</h2>
+        <form>
+            <label for="puram">Purchase Amount (₹):</label>
+            <input type="number" id="puram" placeholder="Enter total amount">
+            
+            <label>Is the Customer Premium?</label>
+            <!-- Fixed Radio Button Group -->
+            <div class="radio-group">
+                <input type="radio" id="Yes" name="premiumStatus" value="yes" checked>
+                <label for="Yes">Yes, Premium</label>
+                
+                <input type="radio" id="No" name="premiumStatus" value="no">
+                <label for="No">No, Regular</label>
+            </div>
+            
+            <input type="button" value="Calculate Discount" onclick="checkOffer()">
+        </form>
+        
+        <div id="output">Discount summary will appear here.</div>
+    </div>
+
+    <script>
+        function checkOffer() {
+            // Get values from input fields
+            let amount = Number(document.getElementById("puram").value);
+            
+            // Fixed: Check which radio button is selected using querySelector
+            let selectedRadio = document.querySelector('input[name="premiumStatus"]:checked');
+            let isPremium = selectedRadio ? selectedRadio.value : "no";
+            
+            let discountPercent = 0;
+            
+            // Nested If-Else logic based on your rules
+            if (amount >= 2000) {
+                if (isPremium === "yes") {
+                    discountPercent = 20; // 20% Discount
+                } else {
+                    discountPercent = 10; // 10% Discount
+                }
+            } else {
+                discountPercent = 0; // No Discount
+            }
+            
+            // Calculate math figures
+            let discountAmount = (amount * discountPercent) / 100;
+            let finalBill = amount - discountAmount;
+            
+            // Display outputs
+            if (discountPercent > 0) {
+                document.getElementById("output").style.color = "white"; // Green text for discount
+                document.getElementById("output").innerHTML = 
+                    "Discount applied: " + discountPercent + "%<br>" +
+                    "Amount Saved: ₹" + discountAmount.toFixed(2) + "<br>" +
+                    "Final Payable Amount: ₹" + finalBill.toFixed(2);
+            } else {
+                document.getElementById("output").style.color = "#333"; // Normal text
+                document.getElementById("output").innerHTML = 
+                    "No Discount Applied.<br>Final Payable Amount: ₹" + amount.toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>

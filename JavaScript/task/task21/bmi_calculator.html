@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculators & Marks</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body{
+            background-image: url("");
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- BMI Calculator -->
+        <div class="card">
+            <h2>BMI Calculator</h2>
+            <label for="t1">Enter Your Height (cm):</label>
+            <input type="number" id="t1">
+            
+            <label for="t2">Enter Your Weight (kg):</label>
+            <input type="number" id="t2">
+            
+            <input type="button" value="Calculate BMI" onclick="fun()">
+            <div id="output" class="output-div">Your BMI will appear here</div>
+        </div>
+
+        <!-- Simple Interest Calculator -->
+        <div class="card">
+            <h2>Simple Interest Calculator</h2>
+            <label for="num1">Enter the Principal Amount:</label>
+            <input type="number" id="num1">
+            
+            <label for="num2">Enter the Rate Of Interest (%):</label>
+            <input type="number" id="num2">
+            
+            <label for="num3">Enter the Time in Years:</label>
+            <input type="number" id="num3">
+            
+            <input type="button" value="Calculate Interest" onclick="fun2()">
+            <div id="display" class="output-div">Your Interest will appear here</div>
+        </div>
+
+        <!-- Student Mark Calculator -->
+        <div class="card">
+            <h2>Student Mark Calculator</h2>
+            <label for="mr1">Your Tamil Mark:</label>
+            <input type="number" id="mr1">
+            
+            <label for="mr2">Your Eng Mark:</label>
+            <input type="number" id="mr2">
+            
+            <label for="mr3">Your Science Mark:</label>
+            <input type="number" id="mr3">
+            
+            <label for="mr4">Your Social Mark:</label>
+            <input type="number" id="mr4">
+            
+            <label for="mr5">Your Maths Mark:</label>
+            <input type="number" id="mr5">
+            
+            <input type="button" value="Calculate Total & Avg" onclick="mark()">
+            <div id="cal" class="output-div">Your Marks will appear here</div>
+        </div>
+    </div>
+
+    <script>
+        // BMI Calculation
+        function fun() {
+            let height = Number(document.getElementById("t1").value);
+            let weight = Number(document.getElementById("t2").value);
+            if(height > 0 && weight > 0) {
+                let fitheight = height / 100;
+                let bmi = weight / (fitheight * fitheight);
+                document.getElementById("output").innerHTML = "Your BMI Value Is: " + bmi.toFixed(2);
+            } else {
+                document.getElementById("output").innerHTML = "Please enter valid values.";
+            }
+        }
+
+        // Simple Interest Calculation
+        function fun2() {
+            let p = Number(document.getElementById("num1").value);
+            let r = Number(document.getElementById("num2").value);
+            let t = Number(document.getElementById("num3").value);
+            // Simple Interest Formula: (P * R * T) / 100
+            let i = (p * r * t) / 100;
+            document.getElementById("display").innerHTML = "Your Interest Is: " + i.toFixed(2);
+        }
+
+        // Student Mark Calculation
+        function mark() {
+            let tam = Number(document.getElementById("mr1").value);
+            let eng = Number(document.getElementById("mr2").value);
+            let sci = Number(document.getElementById("mr3").value);
+            let sco = Number(document.getElementById("mr4").value);
+            let math = Number(document.getElementById("mr5").value);
+            
+            let total = tam + eng + sci + sco + math;
+            let avg = total / 5;
+            
+            document.getElementById("cal").innerHTML = "Total Marks: " + total + " | Average: " + avg.toFixed(2);
+        }
+    </script>
+</body>
+</html>

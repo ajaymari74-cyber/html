@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+ <form> 
+  <label>Enter the Value:</label> 
+  <input type="text" id="t1"> 
+  <input type="button" value="Submit" onclick="fun()"> 
+</form> 
+
+<h1 id="h1"></h1> 
+
+<script>
+function fun(){
+  let a = Number(document.getElementById("t1").value);
+  let c = "";
+  for(let i = 0; i <= 10; i++){
+    c = c + a + "x" + i + "=" + (a * i) + "<br>";
+  }
+  document.getElementById("h1").innerHTML = c;
+}
+</script>
+
+</body>
+</html>

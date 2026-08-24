@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Eligibility Checker</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+     
+    </style>
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2>Admission Checker</h2>
+        <form>
+            <label for="per">Enter Your Percentage:</label>
+            <input type="number" id="per" min="0" max="">
+            <br>
+            <label for="age">Enter Your Age:</label>
+            <input type="number" id="age" min="0" max="">
+            
+            <input type="button" value="Check Eligibility" onclick="fun()"> 
+        </form>
+        <!-- Corrected to use an ID for easier JavaScript targeting -->
+        <div id="output">Your eligibility status will appear here.</div>
+    </div>
+
+    <script>
+        function fun(){
+            // Convert input values to numbers for reliable comparison
+            let per = Number(document.getElementById("per").value);
+            let age = Number(document.getElementById("age").value);
+
+            // Logic including both percentage and age criteria
+            if (age >= 18 && per >= 50) {
+                document.getElementById("output").style.color = "white"; // Green text
+                document.getElementById("output").innerHTML = "You are Eligible for Admission!";
+            } else if (age < 18) {
+                document.getElementById("output").style.color = "white"; // Red text
+                document.getElementById("output").innerHTML = "Not Eligible: Must be 18 or older.";
+            } else {
+                document.getElementById("output").style.color = "white"; // Red text
+                document.getElementById("output").innerHTML = "Not Eligible: Percentage must be 50% or higher.";
+            }
+        }
+    </script>
+      
+</body>
+</html>

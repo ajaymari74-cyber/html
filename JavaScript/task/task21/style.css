@@ -1,0 +1,109 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.form-container {
+    border: solid black 2px;
+    border-radius: 5px;
+    margin-top: 100px;
+    padding: 2cqi;
+    background-color: rgb(157, 0, 255);
+    color: white;
+    line-height: 2.5;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: rgba(46, 95, 240, 0.4) -5px 5px, 
+                rgba(46, 82, 240, 0.3) -10px 10px, 
+                rgba(49, 46, 240, 0.2) -15px 15px, 
+                rgba(56, 46, 240, 0.1) -20px 20px, 
+                rgba(46, 95, 240, 0.05) -25px 25px;
+}
+
+.form-container h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Cleaner looking number input text fields */
+input[type="number"] {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.radio-group {
+    margin: 10px 0;
+}
+
+.radio-group label {
+    font-weight: normal;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+input[type=button] {
+    border-radius: 12px;
+    background-color: blue;
+    height: 35px;
+    margin: 10px 0;
+    margin-left: 30%;
+    color: white;
+    width: 150px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+input[type=button]:hover {
+    background-color: rgb(243, 243, 243);
+    color: black;
+    cursor: pointer;
+    border: 3px solid blue;
+}
+
+.card {
+    border: solid black 2px;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 2cqi;
+    background-color: rgb(157, 0, 255);
+    color: white;
+    line-height: 2.5;
+    width: 100%;
+    max-width: 400px;
+    font-weight: bold;
+      box-shadow: rgba(46, 95, 240, 0.4) -5px 5px, 
+                rgba(46, 82, 240, 0.3) -10px 10px, 
+                rgba(49, 46, 240, 0.2) -15px 15px, 
+                rgba(56, 46, 240, 0.1) -20px 20px, 
+                rgba(46, 95, 240, 0.05) -25px 25px;
+
+}
