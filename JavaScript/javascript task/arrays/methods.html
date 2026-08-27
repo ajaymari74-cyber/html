@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <lable>Enter the Name</lable>
+        <input type="text" id="meth">
+        
+        <input type="button" value="ADD" onclick="math()">
+        <input type="button" value="Remove" onclick="math1()">
+    </form>
+    <script>
+       let b = [];
+
+function math() {
+    let result = document.getElementById("meth").value;
+    
+    // Add value to array
+    b.push(result);
+    
+    // Log the updated array
+    console.log("Current array:", b);
+    
+    // Clear the input field
+    document.getElementById("meth").value = "";
+}
+
+function math1() {
+    let result = document.getElementById("meth").value;
+    
+    // Get the correct index number (0, 1, 2... or -1 if not found)
+    let index = b.indexOf(result);
+    
+    if (index >= 0) {
+        // Remove 1 item at the specific index found
+        b.splice(index, 1);
+        console.log("Value removed. Updated array:", b);
+    } else {
+        console.log("-1: The value doesn't exist");
+    }
+    
+    // Clear the input field
+    document.getElementById("meth").value = "";
+}
+
+
+    </script>
+
+</body>
+
+</html>

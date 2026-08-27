@@ -121,7 +121,7 @@
 
 
 
-//Amstrong Number
+// Amstrong Number
 // let num =153;
 // let val=num;
 // let Arm =0;

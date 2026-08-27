@@ -1,0 +1,21 @@
+//Perfect Number
+for(let z =1; z<=100; z++){
+    
+    
+
+let num =z;
+let sum=0
+ for(i=1; i<num ;i++){
+   if( num % i==0){
+
+    sum +=i;    
+   }
+}
+
+  if(num==sum){
+     console.log("perfect Number" +sum);
+    
+
+ 
+ }
+}
