@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">Enter a Your Name</label>
+    <input type="text" id="str" name="str"> <br><br>
+    <label for="str1">Enter Your Locations:</label>
+    <input type="text" id="str1" name="str"><br><br> 
+    <button onclick="checkString()">Check String</button>
+    <p id="result"></p>
+
+    <script>
+        function checkString(){
+            let str = document.getElementById("str").value;
+            let str1 = document.getElementById("str1").value;
+            document.getElementById("result").innerHTML = "no Of Letters In Your Name: " + str.length;
+            document.getElementById("result").innerHTML += "<br>" + str +  ""+str1+"<br>";
+            let location =`Hi i'm ${str} i'm From ${str1}` ;
+            document.getElementById("result").innerHTML+=  location
+            document.getElementById("result").innerHTML+="<br>Last  Index of I'm"+ location.lastIndexOf("i'm");
+            document.getElementById("result").innerHTML+= "<br>Index of im"+location.indexOf("i'm")
+
+        }
+    
+    </script>
+
+    
+</body>
+</html>
