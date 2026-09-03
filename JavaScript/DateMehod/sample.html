@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="tx1">
+        <input type="button" value="check" onclick="fun()">
+        <h1 id="result"></h1>
+    </form>
+    <!-- <script src="/DateMehod/dateMethod.js"></script> -->
+        <!-- // function fun() { -->
+        <!-- //     let userInput = document.getElementById("tx1").value;
+        //     let notallowed = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$"]
+        //     for (let i = 0; i < userInput.length; i++) {
+        //         let Char = userInput.charAt(i)
+        //         if (notallowed.includes(Char)) {
+        //             document.getElementById("result").innerHTML = "Invalid User Input"+" " + userInput;
+        //         }
+        //         else {
+        //             document.getElementById("result").innerHTML =  userInput;
+        //         }
+        //     }
+        // } -->
+
+<script>
+    function fun() {
+        let userInput = document.getElementById("tx1").value;
+        
+        let Numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+        let Characters = [
+            "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+            "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+        ];
+        let Special = [
+            "!", "@", "#", "$", "%", "&", "*", "(", ")", "-", "+", "=", "_"
+        ];
+
+        if (userInput.length < 4) {
+            document.getElementById("result").innerHTML = "Invalid: Please enter at least 4 characters";
+            return; 
+        }
+
+        let hasNumber = false;
+        let hasSpecial = false;
+        let hasCharacter = false;
+
+        for (let i = 0; i < userInput.length; i++) {
+            let Char = userInput.charAt(i).toLowerCase(); 
+
+            if (Numbers.includes(Char)) {
+                hasNumber = true;
+            }
+            else if (Special.includes(Char)) {
+                hasSpecial = true;
+            }
+            else if (Characters.includes(Char)) {
+                hasCharacter = true;
+            }
+        }
+
+        if (hasCharacter && hasNumber && hasSpecial) {
+            document.getElementById("result").innerHTML = "Valid Password: " + userInput;
+        }
+        else {
+            document.getElementById("result").innerHTML = "Invalid Password: Must contain letters, numbers, and special characters.";
+        }
+    }
+l̥
+
+    </script>
+
+</body>
+
+</html>
