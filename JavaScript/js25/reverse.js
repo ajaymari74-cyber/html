@@ -1,4 +1,4 @@
-let num =1473
+let num =1441;
 let originalnum = num;
 let rev =0
 
